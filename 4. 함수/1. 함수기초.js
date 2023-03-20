@@ -44,6 +44,8 @@ for (var i = 0; i < 5; i++) {
 }
 
 
+
+
 // 원의 넓이를 자주 구한다. 원주율 * 반지름 ^ 2
 
 function calcAreaCircle(r) {
