@@ -31,3 +31,33 @@ multi(add(4,3), add(5,5));
 
 var r4 = add(multi(3,2), 40);
 console.log(`r4: ${r4}`);
+
+// return 탈출문
+function callName(nickName) {
+
+    var prohibits = ['멍청이', '돌아이', '홍길동'];
+
+    if (prohibits.includes(nickName)) {
+        console.log(`잘못된 닉네임은 인사를 못해줘 이놈아`);
+        return;
+    }
+    console.log(`${nickName}님 안녕하세요!`);
+}
+
+callName('돌아이');
+
+
+function stopLoop() {
+
+    while (true) {
+        var flag = prompt('명령어를 입력하세요!');
+        if (flag === '멈춰') {
+            return;
+        }
+        alert(flag);
+    }
+
+    alert('수고용~');
+}
+
+stopLoop();
