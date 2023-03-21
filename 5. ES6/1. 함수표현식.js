@@ -40,3 +40,25 @@ const fArr = [10, 'hello'
 ];
 
 fArr[6]();
+
+
+const dog = {
+    name : '초코',
+    kind : '푸들',
+
+    // 메서드
+    bark : function() {
+        console.log('왈왈!');
+    }
+};
+
+const cat = {
+    name : '야옹이',
+    kind : '페르시안',
+    sleep : function() {
+        console.log('쿨쿨 zzz');
+    }
+};
+
+dog.bark();
+cat.sleep();
