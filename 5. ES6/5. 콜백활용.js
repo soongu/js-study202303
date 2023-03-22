@@ -236,3 +236,5 @@ userList // [{5}, {5}, {5}, {5}]
   .forEach(info => {
     console.log(`${info.name}회원의 첫번째 취미는 ${info.firstHobby}입니다.`);
   });
+
+

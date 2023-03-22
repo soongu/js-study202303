@@ -38,7 +38,6 @@ function showNumber(n, code) {
         }
     }
 }
-
 function test(n) {
     return n % 3 === 0;
 }
