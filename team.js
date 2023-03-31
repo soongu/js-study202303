@@ -1,122 +1,45 @@
+class Student {
+
+    constructor(name, teamHistory) {
+        this.name = name;
+        this.teamHistory = teamHistory;
+    }
+}
+
+
 function start() {
 
     // 이름 배열
-    const nameList = [{
-            name: '구빛나',
-            teamHistory: [1]
-        },
-        {
-            name: '권상지',
-            teamHistory: [8]
-        },
-        {
-            name: '김영수',
-            teamHistory: [6]
-        },
-        {
-            name: '김지승',
-            teamHistory: [7]
-        },
-        {
-            name: '김태근',
-            teamHistory: [8]
-        },
-        {
-            name: '김혜영',
-            teamHistory: [1]
-        },
-        {
-            name: '박수민',
-            teamHistory: [9]
-        },
-        {
-            name: '송유근',
-            teamHistory: [3]
-        },
-        {
-            name: '신지송',
-            teamHistory: [2]
-        },
-        {
-            name: '원석빈',
-            teamHistory: [6]
-        },
-        {
-            name: '윤영식',
-            teamHistory: [9]
-        },
-        {
-            name: '이기덕',
-            teamHistory: [1]
-        },
-        {
-            name: '이동우',
-            teamHistory: [6]
-        },
-        {
-            name: '이민정',
-            teamHistory: [5]
-        },
-        {
-            name: '이상욱',
-            teamHistory: [3]
-        },
-        {
-            name: '이재필',
-            teamHistory: [9]
-        },
-        {
-            name: '이진수',
-            teamHistory: [7]
-        },
-        {
-            name: '이진호',
-            teamHistory: [2]
-        },
-        {
-            name: '이채원',
-            teamHistory: [8]
-        },
-        {
-            name: '정동관',
-            teamHistory: [4]
-        },
-        {
-            name: '조경훈',
-            teamHistory: [4]
-        },
-        {
-            name: '조상천',
-            teamHistory: [3]
-        },
-        {
-            name: '조성훈',
-            teamHistory: [7]
-        },
-        {
-            name: '조예원',
-            teamHistory: [8]
-        },
-        {
-            name: '채지원',
-            teamHistory: [2]
-        },
-        {
-            name: '최예진',
-            teamHistory: [4]
-        },
-        {
-            name: '최재경',
-            teamHistory: [5]
-        },
-        {
-            name: '한세진',
-            teamHistory: [9]
-        },
-        {
-            name: '홍성준',
-            teamHistory: [5]
-        },
+    const nameList = [
+        new Student('구빛나', [1]),
+        new Student('권상지', [8]),
+        new Student('김영수', [6]),
+        new Student('김지승', [7]),
+        new Student('김태근', [8]),
+        new Student('김혜영', [1]),
+        new Student('박수민', [9]),
+        new Student('송유근', [3]),
+        new Student('신지송', [2]),
+        new Student('원석빈', [6]),
+        new Student('윤영식', [9]),
+        new Student('이기덕', [1]),
+        new Student('이동우', [6]),
+        new Student('이민정', [5]),
+        new Student('이상욱', [3]),
+        new Student('이재필', [9]),
+        new Student('이진수', [7]),
+        new Student('이진호', [2]),
+        new Student('이채원', [8]),
+        new Student('정동관', [4]),
+        new Student('조경훈', [4]),
+        new Student('조상천', [3]),
+        new Student('조성훈', [7]),
+        new Student('조예원', [8]),
+        new Student('채지원', [2]),
+        new Student('최예진', [4]),
+        new Student('최재경', [5]),
+        new Student('한세진', [9]),
+        new Student('홍성준', [5]),
     ];
 
     let teamNo = 1;
@@ -127,10 +50,11 @@ function start() {
     // 팀원 수 배열
     const teamNumbers = [3, 3, 3, 3, 3, 3, 3, 4, 4];
     
-    // 하나의 팀원정보
+    // 하나의 팀정보
     const teamList = [];
     
     let checkCount = 0;
+    
     const checkHistory = (select) => {
 
         // 이전 히스토리와 겹치는 팀원이 있으면 스킵
@@ -145,26 +69,23 @@ function start() {
             }
         }
         console.log(`${select.name}체크중: ${checkCount}회`);
-        checkCount = 0;
+        
         return true;
     };
 
     // 팀원 랜덤 생성 함수
     const makeTeam = numOfPerson => {
 
-        
-
         while (teamList.length < numOfPerson) {
             const randomIndex = Math.floor(Math.random() * nameList.length);
             const select = nameList[randomIndex];
 
-            if (checkHistory(select) || checkCount > 200) {
-
+            if (checkHistory(select) || checkCount > 100) {
+                checkCount = 0;
                 teamList.push(select);
                 nameList.splice(randomIndex, 1);
             }
         }
-
 
         teams.push({
             teamNo: teamNo++,
@@ -186,12 +107,9 @@ function start() {
         });
     };
 
-
-
     teamNumbers.forEach(n => {
         makeTeam(n);
     });
-
 
     printTeamInfo();
 
