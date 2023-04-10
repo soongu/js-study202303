@@ -11,35 +11,35 @@ function start() {
 
     // 이름 배열
     const nameList = [
-        new Student('구빛나', [1]),
-        new Student('권상지', [8]),
-        new Student('김영수', [6]),
-        new Student('김지승', [7]),
-        new Student('김태근', [8]),
-        new Student('김혜영', [1]),
-        new Student('박수민', [9]),
-        new Student('송유근', [3]),
-        new Student('신지송', [2]),
-        new Student('원석빈', [6]),
-        new Student('윤영식', [9]),
-        new Student('이기덕', [1]),
-        new Student('이동우', [6]),
-        new Student('이민정', [5]),
-        new Student('이상욱', [3]),
-        new Student('이재필', [9]),
-        new Student('이진수', [7]),
-        new Student('이진호', [2]),
-        new Student('이채원', [8]),
-        new Student('정동관', [4]),
-        new Student('조경훈', [4]),
-        new Student('조상천', [3]),
-        new Student('조성훈', [7]),
-        new Student('조예원', [8]),
-        new Student('채지원', [2]),
-        new Student('최예진', [4]),
-        new Student('최재경', [5]),
-        new Student('한세진', [9]),
-        new Student('홍성준', [5]),
+        new Student('구빛나', [1, 6]),
+        new Student('권상지', [8, 9]),
+        new Student('김영수', [6, 3]),
+        new Student('김지승', [7, 5]),
+        new Student('김태근', [8, 7]),
+        new Student('김혜영', [1, 9]),
+        new Student('박수민', [9, 1]),
+        new Student('송유근', [3, 3]),
+        new Student('신지송', [2, 2]),
+        new Student('원석빈', [6, 5]),
+        new Student('윤영식', [9, 5]),
+        new Student('이기덕', [1, 8]),
+        new Student('이동우', [6, 8]),
+        new Student('이민정', [5, 9]),
+        new Student('이상욱', [3, 6]),
+        new Student('이재필', [9, 8]),
+        new Student('이진수', [7, 1]),
+        new Student('이진호', [2, 4]),
+        new Student('이채원', [8, 2]),
+        new Student('정동관', [4, 7]),
+        new Student('조경훈', [4, 6]),
+        new Student('조상천', [3, 2]),
+        new Student('조성훈', [7, 4]),
+        new Student('조예원', [8, 8]),
+        new Student('채지원', [2, 3]),
+        new Student('최예진', [4, 9]),
+        new Student('최재경', [5, 7]),
+        new Student('한세진', [9, 4]),
+        new Student('홍성준', [5, 1]),
     ];
 
     let teamNo = 1;
@@ -48,7 +48,7 @@ function start() {
     const teams = [];
 
     // 팀원 수 배열
-    const teamNumbers = [3, 3, 3, 3, 3, 3, 3, 4, 4];
+    const teamNumbers = [4,4,4,4,4,4,5];
     
     // 하나의 팀정보
     const teamList = [];
