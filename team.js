@@ -13,7 +13,7 @@ function start() {
     const nameList = [
         new Student('구빛나', [1, 6]),
         new Student('권상지', [8, 9]),
-        new Student('김영수', [6, 3]),
+        // new Student('김영수', [6, 3]),
         new Student('김지승', [7, 5]),
         new Student('김태근', [8, 7]),
         new Student('김혜영', [1, 9]),
@@ -23,7 +23,7 @@ function start() {
         new Student('원석빈', [6, 5]),
         new Student('윤영식', [9, 5]),
         new Student('이기덕', [1, 8]),
-        new Student('이동우', [6, 8]),
+        new Student('이동우', [6, 3]),
         new Student('이민정', [5, 9]),
         new Student('이상욱', [3, 6]),
         new Student('이재필', [9, 8]),
@@ -48,7 +48,7 @@ function start() {
     const teams = [];
 
     // 팀원 수 배열
-    const teamNumbers = [4,4,4,4,4,4,5];
+    const teamNumbers = [4,4,4,4,4,4,4];
     
     // 하나의 팀정보
     const teamList = [];
